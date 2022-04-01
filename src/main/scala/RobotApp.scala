@@ -2,10 +2,10 @@ object RobotApp extends App {
   val x0 = args(0).toInt
   val y0 = args(1).toInt
   val commands = args(2)
-  println(executeAll(x0, y0, commands))
+  println(executeAll(Robot(Direction.North, x0, y0), commands))
 
-  def executeAll(x: Int, y: Int, commands: String): Robot = {
-    commands.toUpperCase.foldLeft(Robot(Direction.North, x, y))(execute)
+  def executeAll(robot: Robot, commands: String): Robot = {
+    commands.toUpperCase.foldLeft(robot)(execute)
   }
 
   def execute(robot: Robot, command: Char): Robot = {
