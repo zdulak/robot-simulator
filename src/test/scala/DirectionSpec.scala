@@ -3,7 +3,7 @@ import org.scalatest.matchers.should
 import org.scalatest.prop.TableDrivenPropertyChecks._
 
 class DirectionSpec extends AnyFlatSpec with should.Matchers {
-  behavior of "rotate"
+  behavior of "The rotate method"
 
   it should "return the direction rotated 90 degrees anticlockwise for an angle of -90 degrees" in {
     val args = Table(
